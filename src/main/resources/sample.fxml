@@ -1,6 +1,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<BorderPane fx:controller="sample.Controller"
+<BorderPane fx:controller="de.rhal.fx.Controller"
             xmlns:fx="http://javafx.com/fxml">
     <center>
         <ScrollPane prefHeight="300" prefWidth="400" hbarPolicy="NEVER" vbarPolicy="ALWAYS" fitToWidth="true">
