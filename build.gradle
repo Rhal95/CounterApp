@@ -1,9 +1,12 @@
+
 plugins{
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.0.9'
 }
+
 version = '0.1'
 group = 'de.rhal.fx'
+mainClassName = 'de.rhal.fx.Main'
 
 repositories {
     mavenCentral()
@@ -18,9 +21,14 @@ javafx {
     ]
 }
 
-
-mainClassName = 'de.rhal.fx.Main'
-
 dependencies {
-    testCompile 'org.junit.jupiter:junit-jupiter:5.4.2'
+    testImplementation(platform('org.junit:junit-bom:5.6.2'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
