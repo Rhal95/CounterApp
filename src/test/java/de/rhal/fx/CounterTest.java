@@ -22,10 +22,10 @@ class CounterTest {
     void countDown() {
         Counter sut = new Counter("TestButton", 2, true);
 
-        assertEquals("TestButton\n2/2 (0%)", sut.text.get());
+        assertEquals("TestButton\n2 (0%)", sut.text.get());
         sut.count();
-        assertEquals("TestButton\n1/2 (50%)", sut.text.get());
+        assertEquals("TestButton\n1 (50%)", sut.text.get());
         sut.count();
-        assertEquals("TestButton\n0/2 (100%)", sut.text.get());
+        assertEquals("TestButton\n0 (100%)", sut.text.get());
     }
 }

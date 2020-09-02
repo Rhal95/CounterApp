@@ -16,23 +16,23 @@ public class Counter {
         this.name = name;
         this.target = target;
         this.countDown = countDown;
-        current = countDown ? target : 0;
+        current = 0;
         updateText();
     }
 
     public void updateText() {
-        text.set(String.format("%s\n%d/%d (", name, current, target)
-                + new DecimalFormat("#.##").format(100.0 / target * current) +"%)");
+        text.set(name +
+                "\n" +
+                (countDown ? target - current : current + "/" + target) +
+                " (" +
+                new DecimalFormat("#.##").format(100.0 / target * current) +
+                "%)"
+        );
     }
 
     public void count() {
-        if (countDown) {
-            current -= step;
-            if (current < 0) current = 0;
-        } else {
-            current += step;
-            if (current > target) current = target;
-        }
+        current += step;
+        if(current > target) current = target;
         updateText();
     }
 }
