@@ -19,7 +19,7 @@ public class Controller {
         int amount = Integer.parseInt(amountTextField.getText());
         boolean countDown = countDownToggleButton.isSelected();
         CounterButton e = new CounterButton(name, amount, countDown);
-        e.setMinWidth(flowPane.getPrefWidth());
+        e.setMaxWidth(Double.POSITIVE_INFINITY);
         flowPane.getChildren().add(e);
     }
 }
