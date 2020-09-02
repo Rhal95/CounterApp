@@ -1,0 +1,24 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <center>
+        <ScrollPane prefHeight="300" prefWidth="400" hbarPolicy="NEVER" vbarPolicy="ALWAYS" fitToWidth="true">
+            <VBox fx:id="flowPane" prefWidth="385"/>
+        </ScrollPane>
+    </center>
+    <bottom>
+        <VBox>
+            <HBox>
+                <Label prefWidth="75" alignment="CENTER" text="Name: "/>
+                <TextField fx:id="nameTextField" prefWidth="125"/>
+                <Label prefWidth="75" alignment="CENTER" text="Amount: "/>
+                <TextField fx:id="amountTextField" prefWidth="125"/>
+            </HBox>
+            <HBox>
+                <ToggleButton fx:id="countDownToggleButton" prefWidth="200" text="Count down"/>
+                <Button prefWidth="200" text="Add" onAction="#addButtonAction"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
