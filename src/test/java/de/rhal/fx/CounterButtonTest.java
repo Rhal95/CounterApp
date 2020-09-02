@@ -1,4 +1,4 @@
-package sample;
+package de.rhal.fx;
 
 import org.junit.jupiter.api.Test;
 
