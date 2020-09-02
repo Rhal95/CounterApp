@@ -1,4 +1,4 @@
-package sample;
+package de.rhal.fx;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
